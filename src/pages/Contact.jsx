@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane, FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -70,7 +71,7 @@ const Contact = () => {
             <div className="pt-8 border-t border-white/10">
               <h4 className="text-white font-bold mb-6">Follow Mama Vee</h4>
               <div className="flex space-x-4">
-                {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map((Icon, index) => (
+                {[FaFacebookF, FaInstagram, FaYoutube, FaXTwitter].map((Icon, index) => (
                   <a
                     key={index}
                     href="#"

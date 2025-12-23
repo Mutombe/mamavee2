@@ -6,6 +6,7 @@ import { MdVerified } from 'react-icons/md';
 import heroImage from '../assets/mamavee-hero.jpg';
 import actorImage from '../assets/mamavee-actor.jpg';
 import carexImage from '../assets/mamavee-carex.jpg';
+import beerImage from '../assets/beerImage.jpg';
 import travelImage from '../assets/mamavee-travel.jpg';
 import eventImage from '../assets/mamavee-event.jpg';
 import worldremitImage from '../assets/mamavee-worldremit.jpg';
@@ -62,15 +63,15 @@ const Home = () => {
             
             <motion.h1 
               variants={fadeInUp}
-              className="text-7xl md:text-9xl lg:text-[11rem] font-heading font-black text-white mb-6 tracking-tighter leading-none drop-shadow-2xl"
+              className="text-6xl sm:text-7xl md:text-9xl lg:text-[11rem] font-heading font-black text-white mb-4 sm:mb-6 tracking-tighter leading-none drop-shadow-2xl px-2"
             >
-              MAMA <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300 relative">
+              MAMA <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300 relative inline-block">
                 VEE
                 <motion.span 
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1, type: "spring" }}
-                  className="absolute -top-4 -right-8 md:-top-8 md:-right-12 text-blue-400 text-4xl md:text-6xl"
+                  className="absolute -top-2 -right-4 sm:-top-4 sm:-right-8 md:-top-8 md:-right-12 text-blue-400 text-2xl sm:text-4xl md:text-6xl"
                 >
                   <MdVerified />
                 </motion.span>
@@ -229,7 +230,7 @@ const Home = () => {
                 whileHover={{ scale: 1.02 }}
                 className="rounded-2xl overflow-hidden shadow-2xl border border-white/5"
               >
-                <img src={worldremitImage} alt="WorldRemit" className="w-full h-full object-cover object-top" />
+                <img src={beerImage} alt="WorldRemit" className="w-full h-full object-cover object-top" />
               </motion.div>
               <motion.div 
                 whileHover={{ scale: 1.02 }}
@@ -243,23 +244,24 @@ const Home = () => {
       </section>
 
       {/* Lifestyle / Travel */}
-      <section className="py-32 bg-dark-900">
-        <div className="container mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden aspect-[21/9]">
-            <img src={travelImage} alt="Travel Lifestyle" className="w-full h-full object-cover object-top" />
-            <div className="absolute inset-0 bg-gradient-to-r from-dark-900/90 via-transparent to-transparent" />
-            <div className="absolute inset-0 flex items-center p-8 md:p-20">
-              <div className="max-w-xl">
-                <h2 className="text-gold-500 font-medium tracking-widest mb-4 uppercase flex items-center gap-2">
-                  <FaGlobe /> Global Citizen
+      {/* Lifestyle / Travel */}
+      <section className="py-16 md:py-32 bg-dark-900">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9]">
+            <img src={travelImage} alt="Travel Lifestyle" className="w-full h-full object-cover object-top md:object-top" />
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-dark-900/95 via-dark-900/70 md:via-transparent to-dark-900/40 md:to-transparent" />
+            <div className="absolute inset-0 flex items-end md:items-center p-6 sm:p-8 md:p-12 lg:p-20">
+              <div className="max-w-xl w-full">
+                <h2 className="text-gold-500 font-medium tracking-widest mb-3 md:mb-4 uppercase flex items-center gap-2 text-xs sm:text-sm">
+                  <FaGlobe className="text-sm sm:text-base" /> Global Citizen
                 </h2>
-                <h3 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 md:mb-6 leading-tight">
                   Taking The Brand Global
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                   From local stages to international destinations. Follow the journey as Mama Vee takes the brand across borders.
                 </p>
-                <button className="px-8 py-4 bg-white text-dark-900 font-bold rounded-full hover:bg-gold-500 transition-colors flex items-center gap-2">
+                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-dark-900 font-bold rounded-full hover:bg-gold-500 transition-colors flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto justify-center">
                   <FaInstagram /> Follow The Journey
                 </button>
               </div>

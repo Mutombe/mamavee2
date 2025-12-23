@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
               Empowering, entertaining, and inspiring millions. Join the journey and be part of the movement.
             </p>
             <div className="flex space-x-4">
-              {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map((Icon, index) => (
+              {[FaFacebookF, FaInstagram, FaYoutube, FaXTwitter].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"

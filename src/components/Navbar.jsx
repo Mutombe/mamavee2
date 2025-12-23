@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaTiktok } from 'react-icons/fa';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { RiMovie2Line, RiUserStarLine, RiContactsLine, RiHome5Line } from 'react-icons/ri';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
