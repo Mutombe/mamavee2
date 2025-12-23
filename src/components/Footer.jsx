@@ -13,7 +13,7 @@ const Footer = () => {
             <Link to="/" className="text-3xl font-heading font-bold text-white mb-6 block">
               MAMA <span className="text-gold-500">VEE</span>
             </Link>
-            <p className="text-gray-400 max-w-md mb-8 leading-relaxed">
+            <p className="gellix-font text-gray-400 max-w-md mb-8 leading-relaxed">
               Empowering, entertaining, and inspiring millions. Join the journey and be part of the movement.
             </p>
             <div className="flex space-x-4">
@@ -33,8 +33,8 @@ const Footer = () => {
             <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {['Home', 'About', 'Content', 'Shop', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`} className="text-gray-400 hover:text-gold-500 transition-colors">
+                <li key={item} className="gellix-font">
+                  <Link to={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`} className="gellix-font text-gray-400 hover:text-gold-500 transition-colors">
                     {item}
                   </Link>
                 </li>
@@ -45,11 +45,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3 text-gray-400">
+              <li className="gellix-font flex items-start space-x-3 text-gray-400">
                 <FaEnvelope size={20} className="text-gold-500 mt-1" />
-                <span>contact@mamavee.com</span>
+                <span>admin@mamavee.co.zw</span>
               </li>
-              <li className="flex items-start space-x-3 text-gray-400">
+              <li className="gellix-font flex items-start space-x-3 text-gray-400">
                 <FaMapMarkerAlt size={20} className="text-gold-500 mt-1" />
                 <span>Los Angeles, CA</span>
               </li>
@@ -63,8 +63,8 @@ const Footer = () => {
             <span className="text-gray-600">Designed by <span className="text-gold-500 font-bold">Bit Studio</span></span>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="gellix-font hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="gellix-font hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

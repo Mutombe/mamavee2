@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaTiktok } from 'react-icons/fa';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,23 +55,17 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10">
-          <div className="flex items-center space-x-8 bg-white/5 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm">
+          <div className="gellix-font flex items-center space-x-8 bg-white/5 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className="relative group flex items-center gap-2"
               >
-                <span className={`text-sm font-medium transition-colors duration-300 ${location.pathname === link.path ? 'text-gold-500' : 'text-gray-300 group-hover:text-white'
+                <span className={`gellix-font text-sm font-medium transition-colors duration-300 ${location.pathname === link.path ? 'text-gold-500' : 'text-gray-300 group-hover:text-white'
                   }`}>
                   {link.name}
                 </span>
-                {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-gold-500 rounded-full"
-                  />
-                )}
               </Link>
             ))}
           </div>
@@ -90,7 +85,8 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-400 text-dark-900 font-bold rounded-full hover:shadow-[0_0_20px_rgba(204,154,23,0.3)] transition-all"
+            onClick={() => navigate('/contact')}
+            className="gellix-font px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-400 text-dark-900 font-bold rounded-full hover:shadow-[0_0_20px_rgba(204,154,23,0.3)] transition-all"
           >
             Book Now
           </motion.button>
@@ -101,7 +97,7 @@ const Navbar = () => {
           className="md:hidden text-white focus:outline-none p-2 rounded-full hover:bg-white/10 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <HiX size={28} /> : <HiMenuAlt4 size={28} />}
+          {isOpen ? <HiX size={28} className="text-white" /> : <HiMenuAlt4 size={28} />}
         </button>
       </div>
 
@@ -152,7 +148,10 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-              <button className="w-full py-4 bg-gold-500 text-dark-900 font-bold rounded-xl text-lg">
+              <button className="w-full py-4 bg-gold-500 text-dark-900 font-bold rounded-xl text-lg"
+                onClick={() => {
+                  navigate('/contact');
+                }}>
                 Book Now
               </button>
             </motion.div>
