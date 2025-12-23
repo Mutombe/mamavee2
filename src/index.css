@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --color-gold-50: #FBF8F1;
+  --color-gold-100: #F5EED9;
+  --color-gold-200: #EBD9A8;
+  --color-gold-300: #E0C478;
+  --color-gold-400: #D6AF47;
+  --color-gold-500: #CC9A17;
+  --color-gold-600: #A37B12;
+  --color-gold-700: #7A5C0D;
+  --color-gold-800: #523D09;
+  --color-gold-900: #291F04;
+
+  --color-dark-900: #0A0A0A;
+  --color-dark-800: #121212;
+  --color-dark-700: #1A1A1A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dark-900 text-white font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300;
+  }
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+}
