@@ -151,6 +151,7 @@ const Navbar = () => {
               <button className="w-full py-4 bg-gold-500 text-dark-900 font-bold rounded-xl text-lg"
                 onClick={() => {
                   navigate('/contact');
+                  setIsOpen(false);
                 }}>
                 Book Now
               </button>
