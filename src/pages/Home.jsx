@@ -640,7 +640,7 @@ const Home = () => {
 
         <Link
           to="/contact"
-          className="text-gold-500 font-bold hover:text-white transition-colors flex items-center gap-3 group text-lg"
+          className="gellix-font text-gold-500 font-bold hover:text-white transition-colors flex items-center gap-3 group text-lg"
         >
           Partner With Mama Vee{" "}
           <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
