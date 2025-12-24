@@ -250,7 +250,7 @@ const Home = () => {
             >
               <button
                 onClick={() => scrollToSection("entertainer")}
-                className="gellix-font text-gold-400 hover:text-gold-300 transition-colors hover:underline"
+                className="gellix-font text-cyan-400 hover:text-gold-300 transition-colors hover:underline"
               >
                 Comedian
               </button>{" "}
@@ -465,141 +465,232 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Brand Ambassador Section */}
-      <section
-        id="brand-ambassador"
-        className="py-32 bg-dark-800 relative overflow-hidden"
-      >
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gold-500/5 -skew-x-12 transform translate-x-32" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            <div className="w-full md:w-1/2">
-              <h2 className="text-gold-500 font-medium tracking-widest mb-4 uppercase flex items-center gap-2">
-                <FaHandshake /> Trusted{" "}
-                <a
-                  href="#brand-ambassador"
-                  className="text-gray-400 hover:text-gray-400 transition-colors underline underline-offset-4"
-                >
-                  Partner
-                </a>
-              </h2>
-              <h3 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
-                Brand{" "}
-                <a
-                  href="#brand-ambassador"
-                  className="text-gold-400 hover:text-gold-300 transition-colors underline decoration-dotted underline-offset-8"
-                >
-                  Ambassador
-                </a>
-              </h3>
-              <p className="gellix-font text-gray-300 text-lg leading-relaxed mb-8">
-                Connecting <WikiLink>top-tier brands</WikiLink> with engaged{" "}
-                <WikiLink>audiences</WikiLink> through authentic{" "}
-                <WikiLink>storytelling</WikiLink> and influence. Proudly
-                representing global names in <WikiLink>finance</WikiLink>,{" "}
-                <WikiLink>lifestyle</WikiLink>, and <WikiLink>health</WikiLink>.
-              </p>
+{/* Brand Ambassador Section */}
+<section
+  id="brand-ambassador"
+  className="py-32 bg-dark-800 relative overflow-hidden"
+>
+  <div className="absolute top-0 right-0 w-1/2 h-full bg-gold-500/5 -skew-x-12 transform translate-x-32" />
+  <div className="container mx-auto px-6 relative z-10">
+    <div className="flex flex-col md:flex-row items-center gap-16">
+      <div className="w-full md:w-1/2">
+        <h2 className="text-gold-500 font-medium tracking-widest mb-4 uppercase flex items-center gap-2">
+          <FaHandshake /> Trusted{" "}
+          <a
+            href="#brand-ambassador"
+            className="text-gray-400 hover:text-gray-400 transition-colors underline underline-offset-4"
+          >
+            Partner
+          </a>
+        </h2>
+        <h3 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
+          Brand{" "}
+          <a
+            href="#brand-ambassador"
+            className="text-gold-400 hover:text-gold-300 transition-colors underline decoration-dotted underline-offset-8"
+          >
+            Ambassador
+          </a>
+        </h3>
+        <p className="gellix-font text-gray-300 text-lg leading-relaxed mb-8">
+          Connecting <WikiLink>top-tier brands</WikiLink> with engaged{" "}
+          <WikiLink>audiences</WikiLink> through authentic{" "}
+          <WikiLink>storytelling</WikiLink> and influence. Proudly
+          representing global names in <WikiLink>finance</WikiLink>,{" "}
+          <WikiLink>lifestyle</WikiLink>, and <WikiLink>health</WikiLink>.
+        </p>
 
-              {/* Brand Logos */}
-              <div className="grid grid-cols-3 gap-6 mb-10">
-                {/* You'll need to add actual logo images - these are placeholders */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">
-                    WorldRemit
-                  </span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">Carex</span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">Doves</span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">Sky Path</span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">
-                    Mama Vee Rice
-                  </span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-500/30 transition-all flex items-center justify-center h-20"
-                >
-                  <span className="text-white font-bold text-sm">
-                    Oden Foods
-                  </span>
-                </motion.div>
-              </div>
+        {/* Brand Logos */}
+        <div className="grid grid-cols-3 gap-6 mb-10">
+          {/* WorldRemit */}
+          <motion.a
+            href="https://www.worldremit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-300" />
+            <img
+              src="/wr.png"
+              alt="WorldRemit Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-sm">WorldRemit</span>
+          </motion.a>
 
-              <Link
-                to="/contact"
-                className="text-gold-500 font-bold hover:text-white transition-colors flex items-center gap-3 group text-lg"
-              >
-                Partner With Mama Vee{" "}
-                <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
-              </Link>
-            </div>
+          {/* Doves */}
+          <motion.a
+            href="https://www.doves.co.zw"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-green-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-teal-500/0 group-hover:from-green-500/20 group-hover:to-teal-500/20 transition-all duration-300" />
+            <img
+              src="/doves.png"
+              alt="Doves Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-sm">Doves</span>
+          </motion.a>
 
-            <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
-              {/* Image 1 - Beer/Choya with warm golden overlay */}
-              <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 relative group h-[400px]"
-              >
-                <img
-                  src={beerImage}
-                  alt="Brand Partnership"
-                  className="w-full h-full object-cover object-top"
-                />
-                {/* Vibrant Gradient Overlay matching the warm tones */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-600/60 via-orange-500/40 to-yellow-600/50 opacity-60 group-hover:opacity-80 transition-all duration-500 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-transparent to-transparent" />
-                
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-transparent blur-xl" />
-                </div>
-              </motion.div>
+          {/* Sky Path */}
+          <motion.a
+            href="https://www.skypath.co.zw"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300" />
+            <img
+              src="/sky.png"
+              alt="Sky Path Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-sm">Sky Path</span>
+          </motion.a>
 
-              {/* Image 2 - Carex with cool blue overlay */}
-              <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 mt-8 relative group h-[400px]"
-              >
-                <img
-                  src={carexImage}
-                  alt="Brand Collaboration"
-                  className="w-full h-full object-cover object-top"
-                />
-                {/* Vibrant Gradient Overlay matching the blue/red Carex branding */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 via-red-500/40 to-gold-600/50 opacity-60 group-hover:opacity-80 transition-all duration-500 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent" />
-                
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-transparent blur-xl" />
-                </div>
-              </motion.div>
-            </div>
-          </div>
+          {/* Mama Vee Rice */}
+          <motion.a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              // You can add a modal or redirect to a product page
+              alert('Mama Vee Rice - Coming Soon!');
+            }}
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-orange-500/0 group-hover:from-amber-500/20 group-hover:to-orange-500/20 transition-all duration-300" />
+            <img
+              src="/rice.png"
+              alt="Mama Vee Rice Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-xs text-center">Mama Vee Rice</span>
+          </motion.a>
+
+          {/* Oden Foods */}
+          <motion.a
+            href="https://www.odenfoods.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all duration-300" />
+            <img
+              src="/of.png"
+              alt="Oden Foods Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-sm">Oden Foods</span>
+          </motion.a>
+
+                    {/* Carex */}
+          <motion.a
+            href="https://www.carex.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group p-4 bg-gradient-to-br from-red-500/10 to-pink-500/10 border border-red-500/20 rounded-xl hover:border-gold-500/50 transition-all flex items-center justify-center h-24 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 to-pink-500/0 group-hover:from-red-500/20 group-hover:to-pink-500/20 transition-all duration-300" />
+            <img
+              src="/carex.png"
+              alt="Carex Logo"
+              className="max-w-full max-h-full object-contain relative z-10 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <span className="hidden text-white font-bold text-sm">Carex</span>
+          </motion.a>
         </div>
-      </section>
+
+        <Link
+          to="/contact"
+          className="text-gold-500 font-bold hover:text-white transition-colors flex items-center gap-3 group text-lg"
+        >
+          Partner With Mama Vee{" "}
+          <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
+        </Link>
+      </div>
+
+      <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
+        {/* Image 1 - Beer/Choya with warm golden overlay */}
+        <motion.div
+          whileHover={{ scale: 1.02, y: -5 }}
+          className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 relative group h-[400px]"
+        >
+          <img
+            src={beerImage}
+            alt="Brand Partnership"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Vibrant Gradient Overlay matching the warm tones */}
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-600/60 via-orange-500/40 to-yellow-600/50 opacity-60 group-hover:opacity-80 transition-all duration-500 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-transparent to-transparent" />
+          
+          {/* Glow effect on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-transparent blur-xl" />
+          </div>
+        </motion.div>
+
+        {/* Image 2 - Carex with cool blue overlay */}
+        <motion.div
+          whileHover={{ scale: 1.02, y: -5 }}
+          className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 mt-8 relative group h-[400px]"
+        >
+          <img
+            src={carexImage}
+            alt="Brand Collaboration"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Vibrant Gradient Overlay matching the blue/red Carex branding */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 via-red-500/40 to-gold-600/50 opacity-60 group-hover:opacity-80 transition-all duration-500 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent" />
+          
+          {/* Glow effect on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-transparent blur-xl" />
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  </div>
+</section>
 
     {/* Lifestyle / Travel - Enhanced Section */}
       <section className="py-16 md:py-32 bg-dark-900 relative">
