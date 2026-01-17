@@ -196,7 +196,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-1">Office</h4>
-                  <p className="gellix-font text-gray-400">Harare, Zimbabwe</p>
+                  <p className="gellix-font text-gray-400">42 Glamorgan Avenue, Harare, Zimbabwe</p>
                   <p className="gellix-font text-gray-500 text-sm">Available for meetings</p>
                 </div>
               </motion.div>
